@@ -209,7 +209,7 @@
       <a href="mailto:${data.contact.email}" class="contact__row"><i class="fa-solid fa-envelope"></i> ${data.contact.email}</a>
       <a href="tel:${data.contact.phone.replace(/\s+/g, "")}" class="contact__row"><i class="fa-solid fa-phone"></i> ${data.contact.phone}</a>
       <a href="${data.contact.linkedin}" class="contact__row" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> ${data.contact.linkedin.replace(/^https?:\/\//, "")}</a>
-      <a href="${data.contact.github}" class="contact__row" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> ${data.contact.github.replace(/^https?:\/\//, "")}</a>
+      <a href="${data.contact.github}" class="contact__row" target="_blank" rel="noopener"><i class="fas fa-link"></i> ${data.contact.github.replace(/^https?:\/\//, "")}</a>
       <a href="#" class="contact__row"><i class="fa-solid fa-location-dot"></i> ${data.contact.location}</a>
     `;
     document.getElementById("footerSocials").innerHTML = `
