@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="pageTitle">Anas AbuQuta — Portfolio</title>
+    <meta id="pageDescription" name="description" content="" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ============ LOADING SCREEN ============ -->
+    <div class="loader" id="loader" aria-hidden="true">
+      <div class="loader__mark">
+        <span class="loader__coord" id="loaderCoord"></span>
+        <div class="loader__bar"><div class="loader__fill"></div></div>
+        <span class="loader__label"
+          >compiling profile<span class="loader__dots">...</span></span
+        >
+      </div>
+    </div>
+
+    <!-- ============ SCROLL PROGRESS ============ -->
+    <div class="progress-bar" id="progressBar" aria-hidden="true"></div>
+
+    <!-- ============ AMBIENT CURSOR GLOW (desktop only) ============ -->
+    <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+    <!-- ============ NAVIGATION ============ -->
+    <header class="nav" id="nav">
+      <div class="nav__inner">
+        <a href="#hero" class="nav__brand">
+          <span class="nav__brand-mark" id="navBrandMark">AA</span>
+          <span class="nav__brand-text" id="navBrandText">Anas AbuQuta</span>
+        </a>
+
+        <nav class="nav__links" id="navLinks">
+          <a href="#about" class="nav__link">About</a>
+          <a href="#experience" class="nav__link">Experience</a>
+          <a href="#skills" class="nav__link">Skills</a>
+          <a href="#projects" class="nav__link">Projects</a>
+          <a href="#services" class="nav__link">Services</a>
+          <a href="#contact" class="nav__link">Contact</a>
+        </nav>
+
+        <div class="nav__actions">
+          <a
+          target="_blank"
+            href="#"
+            class="btn btn--ghost btn--small"
+            download
+            data-role="cv-download"
+            id="navCvLink"
+          >
+            <i class="fa-solid fa-arrow-down"></i> CV
+          </a>
+          <a href="#contact" class="btn btn--solid btn--small">Hire me</a>
+        </div>
+
+        <button
+          class="nav__toggle"
+          id="navToggle"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!-- ============ HERO ============ -->
+      <section class="hero" id="hero">
+        <canvas
+          class="hero__canvas"
+          id="fieldCanvas"
+          aria-hidden="true"
+        ></canvas>
+        <div class="hero__grid" aria-hidden="true"></div>
+
+        <div class="hero__content container">
+          <p class="eyebrow reveal">
+            <span class="eyebrow__ping"></span>
+            <span id="heroEyebrow"></span>
+          </p>
+
+          <h1 class="hero__title reveal" id="heroTitle"></h1>
+
+          <p class="hero__role reveal">
+            <span class="hero__role-static">I work as a</span>
+            <span class="hero__role-typed" id="typedRole"></span
+            ><span class="hero__cursor">|</span>
+          </p>
+
+          <p class="hero__summary reveal" id="heroSummary"></p>
+
+          <div class="hero__actions reveal">
+            <a href="#projects" class="btn btn--solid" id="heroPrimaryCta">
+              <span></span> <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="#contact" class="btn btn--ghost" id="heroSecondaryCta"></a>
+          </div>
+
+          <div class="hero__log reveal" id="dispatchLog" aria-hidden="true">
+            <div class="log__head">
+              <span class="log__dot log__dot--live"></span> live dispatch
+            </div>
+            <div class="log__lines" id="logLines"></div>
+          </div>
+        </div>
+
+        <a
+          href="#about"
+          class="hero__scroll"
+          aria-label="Scroll to about section"
+        >
+          <span>scroll</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </a>
+      </section>
+
+      <!-- ============ ABOUT ============ -->
+      <section class="section" id="about">
+        <div class="container">
+          <p class="section__eyebrow reveal" id="aboutEyebrow"></p>
+          <div class="about__grid">
+            <h2 class="section__title reveal" id="aboutTitle"></h2>
+            <div class="about__body reveal">
+              <div id="aboutParagraphs"></div>
+              <div class="about__facts" id="aboutFacts"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ EXPERIENCE ============ -->
+      <section class="section section--alt" id="experience">
+        <div class="container">
+          <p class="section__eyebrow reveal" id="expEyebrow"></p>
+          <h2 class="section__title reveal" id="expTitle"></h2>
+          <p class="section__lede reveal" id="expLede"></p>
+
+          <div class="timeline" id="timeline"></div>
+
+          <div class="education-card reveal">
+            <div class="education-card__icon">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <div class="education-card__body">
+              <h3 id="eduDegree"></h3>
+              <p id="eduInstitution"></p>
+            </div>
+            <div class="education-card__gpa">
+              <span class="education-card__gpa-num" id="eduGpaNum"></span>
+              <span class="education-card__gpa-label">GPA</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ SKILLS ============ -->
+      <section class="section" id="skills">
+        <div class="container">
+          <p class="section__eyebrow reveal" id="skillsEyebrow"></p>
+          <h2 class="section__title reveal" id="skillsTitle"></h2>
+          <p class="section__lede reveal" id="skillsLede"></p>
+
+          <div class="skills__grid" id="skillsGrid"></div>
+
+          <div class="soft-skills reveal" id="softSkills"></div>
+        </div>
+      </section>
+
+      <!-- ============ PROJECTS ============ -->
+      <section class="section section--alt" id="projects">
+        <div class="container">
+          <p class="section__eyebrow reveal" id="projEyebrow"></p>
+          <h2 class="section__title reveal" id="projTitle"></h2>
+          <p class="section__lede reveal" id="projLede"></p>
+
+          <div class="filters reveal" id="filters">
+            <button class="filter is-active" data-filter="all">All</button>
+            <button class="filter" data-filter="fullstack">Full-Stack</button>
+            <button class="filter" data-filter="data">Data &amp; Python</button>
+          </div>
+
+          <div class="projects__grid" id="projectsGrid">
+            <!-- injected by script.js -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ SERVICES ============ -->
+      <section class="section" id="services">
+        <div class="container">
+          <p class="section__eyebrow reveal" id="servEyebrow"></p>
+          <h2 class="section__title reveal" id="servTitle"></h2>
+
+          <div class="services__grid" id="servicesGrid"></div>
+        </div>
+      </section>
+
+      <!-- ============ ACHIEVEMENTS ============ -->
+      <section class="section section--alt" id="achievements">
+        <div class="container">
+          <p class="section__eyebrow reveal" id="achEyebrow"></p>
+          <h2 class="section__title reveal" id="achTitle"></h2>
+
+          <div class="counters" id="counters"></div>
+          <p class="counters__note reveal" id="achNote"></p>
+        </div>
+      </section>
+
+      <!-- ============ CERTIFICATIONS ============ -->
+      <section class="section" id="certifications">
+        <div class="container">
+          <p class="section__eyebrow reveal" id="certEyebrow"></p>
+          <h2 class="section__title reveal" id="certTitle"></h2>
+
+          <div class="certs__grid" id="certsGrid"></div>
+        </div>
+      </section>
+
+      <!-- ============ TESTIMONIALS ============ -->
+      <section class="section section--alt" id="testimonials">
+        <div class="container">
+          <p class="section__eyebrow reveal" id="testiEyebrow"></p>
+          <h2 class="section__title reveal" id="testiTitle"></h2>
+
+          <div class="testimonials__grid" id="testimonialsGrid"></div>
+        </div>
+      </section>
+
+      <!-- ============ GITHUB STATS ============ -->
+      <section class="section" id="github">
+        <div class="container">
+          <p class="section__eyebrow reveal" id="ghEyebrow"></p>
+          <h2 class="section__title reveal" id="ghTitle"></h2>
+          <div class="github__panel reveal">
+            <p class="github__description">
+              Live GitHub data updated automatically from my public profile.
+            </p>
+
+            <div class="github__live" id="githubLive">
+              <p>Loading GitHub data...</p>
+            </div>
+
+            <div class="github__actions">
+              <a
+                href="https://github.com/AnasAbuQuta"
+                target="_blank"
+                class="btn btn--ghost"
+              >
+                <i class="fa-brands fa-github"></i>
+                View GitHub Profile
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ CONTACT ============ -->
+      <section class="section section--alt" id="contact">
+        <div class="container">
+          <p class="section__eyebrow reveal" id="contactEyebrow"></p>
+          <h2 class="section__title reveal" id="contactTitle"></h2>
+          <p class="section__lede reveal" id="contactLede"></p>
+
+          <div class="contact__grid">
+            <div class="contact__info reveal" id="contactInfo"></div>
+
+            <form
+              class="contact__form reveal"
+              id="contactForm"
+              action="https://formspree.io/f/xgojjnzq"
+              method="POST"
+            >
+              <div class="form__row">
+                <label for="name">Name</label>
+                <input name="name" id="name" type="text" placeholder="Your name" required />
+              </div>
+              <div class="form__row">
+                <label for="email">Email</label>
+                <input
+                  name="email"
+                  id="email"
+                  type="email"
+                  placeholder="you@company.com"
+                  required
+                />
+              </div>
+              <div class="form__row">
+                <label for="message">Message</label>
+                <textarea
+                  name="message"
+                  id="message"
+                  rows="4"
+                  placeholder="Tell me about the role or project..."
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn--solid btn--full">
+                Send message <i class="fa-solid fa-paper-plane"></i>
+              </button>
+              <p class="form__note" id="formNote"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="footer__brand">
+          <span class="nav__brand-mark" id="footerBrandMark">AA</span>
+          <span id="footerBrandText">Anas AbuQuta</span>
+        </div>
+        <p class="footer__tagline" id="footerTagline"></p>
+        <div class="footer__socials" id="footerSocials"></div>
+        <p class="footer__copy">
+          © <span id="year"></span> <span id="footerCopy"></span>
+        </p>
+      </div>
+    </footer>
+
+    <!-- ============ BACK TO TOP ============ -->
+    <button class="to-top" id="toTop" aria-label="Back to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- ============ PROJECT MODAL ============ -->
+    <div class="modal" id="projectModal" aria-hidden="true">
+      <div class="modal__backdrop" id="modalBackdrop"></div>
+      <div class="modal__panel" role="dialog" aria-modal="true">
+        <button class="modal__close" id="modalClose" aria-label="Close">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="modal__content" id="modalContent"></div>
+      </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard — Anas AbuQuta Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+<div class="dash">
+
+  <!-- ============ TOP BAR ============ -->
+  <header class="dash__top">
+    <div class="dash__brand">
+      <span class="dash__brand-mark">AA</span>
+      <div>
+        <strong>Portfolio Dashboard</strong>
+        <span>Edit every section, preview it live, then export</span>
+      </div>
+    </div>
+    <div class="dash__actions">
+      <span class="dash__status" id="statusMsg"></span>
+      <button class="dbtn dbtn--ghost" id="resetBtn"><i class="fa-solid fa-rotate-left"></i> Reset</button>
+      <label class="dbtn dbtn--ghost" for="importFile"><i class="fa-solid fa-file-import"></i> Import
+        <input type="file" id="importFile" accept="application/json,.js" hidden>
+      </label>
+      <button class="dbtn dbtn--ghost" id="exportBtn"><i class="fa-solid fa-file-export"></i> Export data.js</button>
+      <button class="dbtn dbtn--solid" id="saveBtn"><i class="fa-solid fa-check"></i> Save</button>
+    </div>
+  </header>
+
+  <div class="dash__body">
+
+    <!-- ============ SIDEBAR ============ -->
+    <nav class="dash__nav" id="dashNav">
+      <button class="dash__nav-item is-active" data-section="brand"><i class="fa-solid fa-signature"></i> Brand &amp; Meta</button>
+      <button class="dash__nav-item" data-section="hero"><i class="fa-solid fa-house"></i> Hero</button>
+      <button class="dash__nav-item" data-section="about"><i class="fa-solid fa-user"></i> About</button>
+      <button class="dash__nav-item" data-section="experience"><i class="fa-solid fa-briefcase"></i> Experience</button>
+      <button class="dash__nav-item" data-section="education"><i class="fa-solid fa-graduation-cap"></i> Education</button>
+      <button class="dash__nav-item" data-section="skills"><i class="fa-solid fa-chart-simple"></i> Skills</button>
+      <button class="dash__nav-item" data-section="projects"><i class="fa-solid fa-diagram-project"></i> Projects</button>
+      <button class="dash__nav-item" data-section="services"><i class="fa-solid fa-layer-group"></i> Services</button>
+      <button class="dash__nav-item" data-section="achievements"><i class="fa-solid fa-trophy"></i> Achievements</button>
+      <button class="dash__nav-item" data-section="certifications"><i class="fa-solid fa-certificate"></i> Certifications</button>
+      <button class="dash__nav-item" data-section="testimonials"><i class="fa-solid fa-quote-left"></i> Testimonials</button>
+      <button class="dash__nav-item" data-section="dispatch"><i class="fa-solid fa-satellite-dish"></i> Dispatch Log</button>
+      <button class="dash__nav-item" data-section="github"><i class="fa-brands fa-github"></i> GitHub</button>
+      <button class="dash__nav-item" data-section="contact"><i class="fa-solid fa-address-card"></i> Contact &amp; Footer</button>
+    </nav>
+
+    <!-- ============ FORM PANEL ============ -->
+    <main class="dash__form" id="formRoot"></main>
+
+    <!-- ============ LIVE PREVIEW ============ -->
+    <aside class="dash__preview">
+      <div class="dash__preview-head">
+        <span><i class="fa-solid fa-eye"></i> Live preview</span>
+        <a href="index.html" target="_blank" class="dash__preview-open">Open full site <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+      </div>
+      <iframe src="index.html" id="previewFrame" title="Live preview"></iframe>
+    </aside>
+
+  </div>
+</div>
+
+<script src="data.js"></script>
+<script src="dashboard.js"></script>
+</body>
+</html>
