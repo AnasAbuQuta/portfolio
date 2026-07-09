@@ -43,8 +43,8 @@ window.SITE_DATA = {
     "roles": [
       "Data Science & AI Student",
       "Software Developer",
-      "Information Management Specialist",
-      "Humanitarian Field Coordinator"
+      "Humanitarian Field Coordinator",
+      "Data Entry"
     ],
     "summary": "Data Science & AI student combining software engineering with humanitarian field experience — data collection, information management, and digital transformation for organizations that operate where the need is real.",
     "primaryCtaText": "View projects",
@@ -68,7 +68,7 @@ window.SITE_DATA = {
       },
       {
         "label": "Currently",
-        "value": "Field Coordinator, PHC"
+        "value": "Open To Work"
       },
       {
         "label": "Stack",
