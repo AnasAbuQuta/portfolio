@@ -82,9 +82,9 @@ window.SITE_DATA = {
     "lede": "A record of where I've worked, on the ground and in the codebase.",
     "items": [
       {
-        "marker": "now",
+        "marker": "01",
         "role": "Field Coordinator",
-        "dateRange": "Jan 2026 — Present",
+        "dateRange": "Jan 2026 — May 2026",
         "org": "Palestinian Housing Council (PHC)",
         "bullets": [
           "Coordinate humanitarian field activities and beneficiary registration via Kobo Toolbox",
