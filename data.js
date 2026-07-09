@@ -273,7 +273,7 @@ window.SITE_DATA = {
   github: {
     eyebrow: "09 — GitHub",
     title: "Activity",
-    username: "your-username"
+    username: "AnasAbuQuta"
   },
 
   contact: {
@@ -283,7 +283,7 @@ window.SITE_DATA = {
     email: "your.email@example.com",
     phone: "+970 00 000 0000",
     linkedin: "https://linkedin.com/in/your-profile",
-    github: "https://github.com/your-username",
+    github: "https://github.com/AnasAbuQuta",
     location: "Palestine",
     cvUrl: ""
   },
