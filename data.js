@@ -35,10 +35,10 @@ window.SITE_DATA = {
     }
   ],
   "hero": {
-    "eyebrow": "Field-tested engineering, from Nablus to production",
+    "eyebrow": "Full Stack Web Developer",
     "titleLine1": "Building software",
     "titleEm": "and",
-    "titleLine2": "coordinating people",
+    "titleLine2": "Field Coordinator",
     "titleLine3": "who need it most.",
     "roles": [
       "Data Science & AI Student",
