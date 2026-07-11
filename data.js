@@ -38,7 +38,7 @@ window.SITE_DATA = {
     "eyebrow": "Full Stack Web Developer",
     "titleLine1": "Building software",
     "titleEm": "and",
-    "titleLine2": "Field Coordinator",
+    "titleLine2": "coordinating people",
     "titleLine3": "who need it most.",
     "roles": [
       "Data Science & AI Student",
