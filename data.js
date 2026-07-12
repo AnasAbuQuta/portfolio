@@ -35,18 +35,20 @@ window.SITE_DATA = {
     }
   ],
   "hero": {
-    "eyebrow": "Full Stack Web Developer",
+    "eyebrow": "Software Engineer • Data Science & AI",
     "titleLine1": "Building software",
-    "titleEm": "and",
-    "titleLine2": "coordinating people",
-    "titleLine3": "who need it most.",
+    "titleEm": "For",
+    "titleLine2": "Real-world solutions.",
+    "titleLine3": "",
     "roles": [
       "Data Science & AI Student",
-      "Software Developer",
+      "Software Engineer",
       "Humanitarian Field Coordinator",
-      "Data Entry"
+      "Data Entry",
+      "Full Stack Web Developer",
+      "Information Management"
     ],
-    "summary": "Data Science & AI student combining software engineering with humanitarian field experience — data collection, information management, and digital transformation for organizations that operate where the need is real.",
+    "summary": "Software Engineer with experience in web development, data science, and information management. Passionate about building scalable, user-focused software solutions and continuously learning new technologies. Currently pursuing a Bachelor's degree in Data Science & AI.",
     "primaryCtaText": "View projects",
     "secondaryCtaText": "Get in touch"
   },
