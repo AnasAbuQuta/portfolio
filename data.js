@@ -6,7 +6,7 @@ window.SITE_DATA = {
     "brandInitials": "AQ"
   },
   "loader": {
-    "coordinate": "31.98°N, 35.30°E"
+    "coordinate": "Welcome"
   },
   "dispatchLog": [
     {
@@ -50,7 +50,15 @@ window.SITE_DATA = {
     ],
     "summary": "Software Engineer with experience in web development, data science, and information management. Passionate about building scalable, user-focused software solutions and continuously learning new technologies. Currently pursuing a Bachelor's degree in Data Science & AI.",
     "primaryCtaText": "View projects",
-    "secondaryCtaText": "Get in touch"
+    "secondaryCtaText": "Get in touch",
+    "techBadges": [
+      {
+        "icon": "fa-solid fa-star",
+        "label": "JS",
+        "color": "#3ED6A7"
+      }
+    ],
+    "photoUrl": "https://drive.google.com/file/d/1a25qwYlb2HGFAUiSuQD_s5M2CVNnR4SU/view?usp=sharing"
   },
   "about": {
     "eyebrow": "01 — About",
